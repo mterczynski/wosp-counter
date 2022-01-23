@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link href="style.css" rel="stylesheet" />
+    <script>
+      window.addEventListener('load', () => {
+        function reverse(s){
+            return s.split("").reverse().join("");
+        }
+
+        // function formatNumericValue(value) {
+        //   return reverse(reverse(String(value)).split('').map((el, i) => i !== 0 && i % 3 === 0 ? ' ' + el : el).join('')) + ' zł'
+        // }
+
+        // function formatDate(date) {
+        //   const options = {
+        //     year: 'numeric', month: 'numeric', day: 'numeric',
+        //     hour: 'numeric', minute: 'numeric',
+        //     hour12: false,
+        //   };
+        //   return new Intl.DateTimeFormat('pl-PL', options).format(new Date(date))
+        // }
+
+        const staffElement = document.querySelector('#staff');
+        const dateElement = document.querySelector('#hour-state');
+        const cityElement = document.querySelector('#city');
+        const countryElement = document.querySelector('#country');
+
+        function handleResponse(response) {
+          staffElement.innerHTML = response.staff;
+          cityElement.innerHTML = response.city;
+          countryElement.innerHTML = response.country;
+
+          dateElement.innerHTML = response.updatedAt;
+        }
+
+        handleResponse({
+          staff: '666 666 zł',
+          city: '1 005 523 zł',
+          country: '32 253 302 zł',
+          updatedAt: '23.01.2022 23:51'
+        });
+
+        // fetch('https://wospapi.free.beeceptor.com/status2').then(response => response.json()).then(handleResponse)
+      });
+      
+    </script>
+  </head>
+  <body>
+    
+    <!-- <h1>
+      This is a static template, there is no bundler or bundling involved!
+    </h1> -->
+
+    <div class="container">
+      <div class="sixteen-to-nine">
+        
+        <img
+          src="https://user-images.githubusercontent.com/25098043/150696912-a88f0702-3ada-4214-a3ad-19bb66328875.png"
+          alt="wośp"
+          class="background"
+        />
+        <div class="text text-left-column staff" id="staff">666 666 zł</div>
+        <div class="text hour-state" id="hour-state">18:00 23.01.2022</div>
+        <div class="text text-left-column city" id="city">1 005 523 zł</div>
+        <div class="text text-left-column country" id="country">32 253 302 zł</div>
+      </div>
+    </div>
+
+    <!-- <div class="child">
+      <img
+        src="https://user-images.githubusercontent.com/25098043/150696912-a88f0702-3ada-4214-a3ad-19bb66328875.png"
+        alt="wośp"
+        class="background"
+      /> -->
+    <!-- </div> --> -->
+  </body>
+</html>

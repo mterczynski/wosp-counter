@@ -1,0 +1,77 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #001532;
+    /* height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0; */
+    font-family: Impact;
+  
+    /* background: url(https://user-images.githubusercontent.com/25098043/150696912-a88f0702-3ada-4214-a3ad-19bb66328875.png)
+      black;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+  }
+  
+  /* .container {
+    background: green;
+  } */
+  
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+    max-width: 1920px;
+    max-height: 1080px;
+  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .sixteen-to-nine {
+    width: 100%;
+    height: 0;
+    padding-top: min(56.25%, 100vh);
+    background-color: #ccc;
+    position: relative;
+  }
+  
+  .text {
+    position: absolute;
+    font-size: min(5vw, 90px);
+    right: 31.5%;
+  }
+  
+  .hour-state {
+    left: 48.9%;
+    top: 15.3%;
+  
+    font-size: 3vw;
+    white-space: nowrap;
+  }
+  
+  .staff {
+    top: 36%;
+  }
+  
+  .city {
+    top: 60%;
+  }
+  
+  .country {
+    top: 84%;
+  }
+  
